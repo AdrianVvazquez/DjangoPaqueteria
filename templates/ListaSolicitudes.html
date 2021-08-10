@@ -1,0 +1,33 @@
+{% extends "inicio.html" %}
+
+{% block principal %}
+{% for a in servicios %}
+<div>        
+    <ul>
+        <li class="soli">
+            <p><b>Servicio: {{a.id}}</b></p>
+        </li>
+        <li class="soli">
+            <p>
+                {{a.tipo}}
+            </p>
+        </li>
+        <li class="soli">
+            <p>
+                {{a.descripcion_envio}}
+            </p>
+        </li>
+        <li class="soli">
+            <p>
+                {{a.nombre_receptor}}
+            </p>
+        </li>
+        <li class="soli">
+            <p>
+                {{a.direccion_receptor}}
+            </p>
+        </li>
+    </ul>
+</div>
+        {% endfor %}
+{% endblock %}

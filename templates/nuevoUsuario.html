@@ -1,0 +1,15 @@
+{% extends "inicio.html" %}
+
+{% block principal %}
+
+<h1>Registro</h1>
+
+<form action="" method="post">
+    {% csrf_token %}
+
+    {{formulario.as_p}}
+
+    <button>Registrarse</button>
+</form>
+
+{% endblock %}

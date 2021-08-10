@@ -1,0 +1,22 @@
+{% extends "inicio.html" %}
+{% block principal %}
+
+<h1>Registro</h1>
+
+{% if h %}
+{{h}}
+<p>Estás a un paso de crear tu cuenta.<br/>Confirma tu sesión para finalizar con el proceso.</p>
+<a class="verificarCorreo" href="login">Verificar correo</a><br/><br/>
+{% endif %}
+
+<form action="" method="post">
+    {% csrf_token %}
+
+    {{formulario.as_p}}
+
+    <button>Ingresar</button>
+</form>
+<br/>
+¿eres nuevo? <a href="registrarse">Registrarse</a>
+
+{% endblock %}

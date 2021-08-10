@@ -1,0 +1,22 @@
+{% extends "inicio.html" %}
+
+{% block principal %}
+
+<h1>Nuevo Servicio</h1>
+
+{% if servicio %}
+<p>Servicio de {{servicio}} solicitado</p>
+<a href="servicio"><p>Otro Servicio</hp></a>
+
+{% else %}
+
+<form action="" method="post">
+    {% csrf_token %}
+    
+    {{form.as_p}}
+    
+    <button>Solicitar</button>
+</form>
+
+{% endif %}
+{% endblock %}
